@@ -1617,6 +1617,30 @@
     <!-- gameid end -->
 
     <script>
+        //new VConsole()
+        chomoo.projectid = "0923prudential"; //项目ID
+        chomoo.appid = "wxa1b26ae4e517ef5a"; //wxe893bfa0b4fdf4cc   wx663b7bc7d5005b26  wx4c5ac29369c49b35
+        chomoo.component_appid = "wxcbca8b69f0a8770a";
+        chomoo.authMode = authMode.DEBUG; //授权方式，BASE隐式授权，USERINFO显示授权，DEBUG调试模式（必需手动设置openid参数）
+        chomoo.isComponent = true; //采用Component授权方式
+        chomoo.init(); //调用初始化方法
+
+        //分享内容对象
+        var shareModel = {
+            imgUrl: "https://h6.qiaomukeji.com/202009/prudential/share.jpg",
+            lineLink: "https://ws.qiaomukeji.com/project/?proId=0923prudential",
+            shareTitle: "保诚中秋穿越记",
+            descContent: "开启月光“保”盒，你想回到哪一刻？"
+        };
+        chomoo.wxJsReady(function() {
+            chomoo.setShare(shareModel, function() {
+                console.log("分享成功回调");
+            });
+            chomoo.setShareTimeline(shareModel, function() {
+                console.log("分享朋友圈成功回调");
+            });
+        });
+
         function getPara(_key) {
             var reg = new RegExp("(^|&)" + _key + "=([^&]*)(&|$)");
             var r = window.location.search.substr(1).match(reg);
@@ -1625,11 +1649,44 @@
         }
 
         init();
+
+        function init() {
+            var t_skey = getPara("skey") || "chomoo_test_001";
+
+            if (!t_skey) {
+                location.href = shareModel.lineLink;
+            }
+
+            var t_userApi = "https://ws.qiaomukeji.com/users/login?skey=" + t_skey;
+            $.get(t_userApi, (_res) => {
+                if (_res["code"] != 0) {
+                    location.href = shareModel.lineLink;
+                    return;
+                }
+                console.log('授权信息：', _res)
+                window["my_wxName"] = _res["user"]["name"]; //昵称
+                window["my_avatar"] = _res["user"]["avatar"]; //头像
+                window["my_skey"] = _res["skey"]; //用户id
+            });
+        }
     </script>
     <script src="mid_files/index.js"></script>
 
 
     <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(231, 216, 75); transform: translate3d(334.735px, 91px, 0px) scale(0.85);">*</span>
+    <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(720.781px, 301px, 0px) scale(0.75);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(231, 216, 75); transform: translate3d(729.462px, 301px, 0px) scale(0.758333);">*</span>
+    <span
+        style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(716.7px, 296px, 0px) scale(0.791667);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(214, 28, 89); transform: translate3d(735.106px, 294px, 0px) scale(0.8);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(724.789px, 287px, 0px) scale(0.833333);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(214, 28, 89); transform: translate3d(728.065px, 284px, 0px) scale(0.841667);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(720.476px, 276px, 0px) scale(0.85);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(214, 28, 89); transform: translate3d(703.823px, 270px, 0px) scale(0.858333);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(231, 216, 75); transform: translate3d(698.654px, 263px, 0px) scale(0.866667);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(682.165px, 255px, 0px) scale(0.875);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(684.731px, 251px, 0px) scale(0.883333);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(231, 216, 75); transform: translate3d(684.478px, 249px, 0px) scale(0.891667);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(676.932px, 247px, 0px) scale(0.9);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(671.073px, 244px, 0px) scale(0.908333);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(231, 216, 75); transform: translate3d(665.767px, 241px, 0px) scale(0.916667);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(664.37px, 239px, 0px) scale(0.925);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(659.951px, 237px, 0px) scale(0.933333);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(231, 216, 75); transform: translate3d(657.366px, 235px, 0px) scale(0.941667);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(214, 28, 89); transform: translate3d(660.929px, 233px, 0px) scale(0.95);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(658.853px, 229px, 0px) scale(0.958333);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(655.4px, 227px, 0px) scale(0.966667);">*</span>
+        <span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(214, 28, 89); transform: translate3d(655.771px, 221px, 0px) scale(0.975);">*</span><span style="position: absolute; display: block; pointer-events: none; z-index: 10000000; font-size: 18px; will-change: transform; color: rgb(27, 135, 152); transform: translate3d(659.878px, 212px, 0px) scale(0.983333);">*</span>
 </body>
 
 </html>
