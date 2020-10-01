@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+  background-color: #fff !important;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.dogquan_colse1 {
+  transform: scale(1, 1);
+  animation: fantan 0.2s linear 1;
+}
+
+@keyframes fantan {
+  0% {
+    -webkit-transform: translateX(-50%) scale(1, 1);
+  }
+
+  50% {
+    -webkit-transform: translateX(-50%) scale(0.85, 0.85);
+  }
+
+  100% {
+    -webkit-transform: translateX(-50%) scale(1, 1);
+  }
+}
+
+/* loading start */
+.loading {
+  width: 100%;
+  height: 100%;
+}
+
+.load_crescent {
+  width: 3rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cloud1 {
+  width: 4.11rem;
+  position: absolute;
+  top: 3.55rem;
+  left: 0;
+  animation: cloud1 3.5s forwards 0.2s;
+}
+
+.cloud2 {
+  width: 4.12rem;
+  position: absolute;
+  top: 5.65rem;
+  right: 0;
+  animation: cloud2 3.5s forwards 0.3s;
+}
+
+.cloud3 {
+  width: 6.12rem;
+  position: absolute;
+  top: 6.8rem;
+  left: 0;
+  animation: cloud3 3.5s forwards 0.2s;
+}
+
+.cloud4 {
+  width: 2.83rem;
+  position: absolute;
+  top: 8.35rem;
+  right: 0;
+  animation: cloud4 3.5s forwards 0.3s;
+}
+
+@keyframes cloud1 {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -2.055rem;
+  }
+}
+
+@keyframes cloud2 {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -2.06rem;
+  }
+}
+
+@keyframes cloud3 {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -3.06rem;
+  }
+}
+
+@keyframes cloud4 {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -1.415rem;
+  }
+}
+
+
+.loading .load_text {
+  position: fixed;
+  bottom: 1.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffe537;
+}
+
+.loading .lt_progress {
+  font-size: 0.56rem;
+}
+
+.loading .lt_loading {
+  font-size: 0.38rem;
+}
+
+.loading .index_title{
+  position: fixed;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.2rem;
+}
+
+.loading .index_capsule {
+  position: fixed;
+  width: 2.5rem;
+  /* bottom: 2.3rem; */
+  top: 6.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loading .index_btn {
+  width: 2.4rem;
+  position: fixed;
+  bottom: 1.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loading .logo,
+.logo {
+  width: 1.48rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  z-index: 1;
+}
+
+/* loading end */
+
+/* index start */
+.index {
+  width: 100%;
+  height: 100%;
+}
+
+.index .index_content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.index .index_title {
+  width: 4.2rem;
+  margin: 1.8rem auto 0;
+}
+
+.index .index_month {
+  width: 3rem;
+  margin: 0.5rem auto 0;
+}
+
+.index .index_capsule {
+  width: 2.5rem;
+  margin: 0 auto;
+}
+
+.index .index_btn {
+  width: 2.4rem;
+  margin: 0.5rem auto 0;
+}
+
+.index .logo {
+  width: 1.48rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  z-index: 1;
+}
+
+/* index end */
+
+/* video start */
+/* .videoPlayer {
+  width: 200px;
+  height: 200px;
+  background: black;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+
+.videoPlayer video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.page {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  z-index: 9;
+}
+
+#videoPage #video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+} */
+/* video end */
+
+.video_play {
+  width: 2.78rem;
+  position: absolute;
+  bottom: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.video_poster,
+.video_cake{
+  width: 3.24rem;
+  position: absolute;
+  bottom: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+/* gameid start */
+/* gameid end */
