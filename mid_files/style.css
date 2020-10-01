@@ -1,0 +1,452 @@
+/* div,img{
+    position: absolute;
+} */
+/* .gameid div,
+.gameid img {
+  position: absolute;
+
+} */
+
+.gameid {
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* 月饼选择 */
+/* .pageselect {
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.text {
+  top: 3.87rem;
+  left: 6.61rem;
+  width: 0.38rem;
+  animation: text 1.5s ease-in 0.3s infinite;
+}
+
+.light_text {
+  top: 3.87rem;
+  left: 6.61rem;
+  width: 0.38rem;
+  animation: light_text 1.5s ease-out 0.5s infinite;
+}
+
+
+
+.pageselect>.yuebingdiv {
+  bottom: 5.88rem;
+  left: 2.27rem;
+}
+
+.yuebing {
+  width: 1.3rem;
+}
+
+.yuebing1 {
+  top: 0rem;
+  left: 0rem;
+}
+
+.yuebing2 {
+  top: 0rem;
+  left: 1.68rem;
+}
+
+.yuebing3 {
+  top: 1.98rem;
+  left: 0rem;
+}
+
+.yuebing4 {
+  top: 1.98rem;
+  left: 1.68rem;
+}
+
+.yuebing5 {
+  top: 3.96rem;
+  left: 0rem;
+}
+
+.yuebing6 {
+  top: 3.96rem;
+  left: 1.68rem;
+}
+
+.yuebing7 {
+  top: 5.94rem;
+  left: 0rem;
+}
+
+.yuebing8 {
+  top: 5.94rem;
+  left: 1.68rem;
+}
+
+.select {
+  display: none;
+  top: 0.8rem;
+  left: 0.8rem;
+  width: 0.65rem;
+}
+
+.select.logo {
+  left: 5.41rem;
+  top: 15.06rem;
+  width: 1.48rem;
+} */
+
+.pageselect{
+  width: 7.5rem;
+  height: 16.6rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -8.3rem;
+}
+
+.pageselect img{
+  width: 100% !important;
+}
+
+.text{
+  position: absolute;
+  left: 6.61rem;
+  top: 3.87rem;
+  width: 0.38rem;
+}
+
+.light_text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: text 3s linear 0.5s infinite;
+}
+
+@keyframes text {
+  0% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.yuebingdiv{
+  width:3rem;
+  position: absolute;
+  top: 5.88rem;
+  left: 50%;
+  margin-left: -1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.yuebing1{
+  width: 1.3rem;
+  position: relative;
+}
+
+.yuebing2{
+  margin-left: 0.4rem;
+}
+
+.yuebing3{
+  margin-top: 0.62rem;
+}
+
+.yuebing{
+  width: 100%;
+}
+.select{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* 月饼选择 */
+
+/* 海报1 */
+.pageposter1 {
+  display: none;
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  z-index: 11;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* .bg,
+.poster1 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+} */
+
+.pageposter1>.text {
+  top: 3.87rem;
+  /* top: 0; */
+  left: 6.61rem;
+  width: 0.38rem;
+}
+
+.poster1.yuebingdiv {
+  top: 7.34rem;
+  left: 3.47rem;
+}
+
+.yuebingdiv>img {
+  width: 1.3rem;
+}
+
+.yuebing1.poster1 {
+  top: 0rem;
+  left: 0rem;
+}
+
+.yuebing2.poster1 {
+  top: 0rem;
+  left: 1.68rem;
+}
+
+.yuebing3.poster1 {
+  top: 12.375rem;
+  left: 0rem;
+}
+
+.yuebing4.poster1 {
+  top: 1.98rem;
+  left: 1.68rem;
+}
+
+.poster1.logo {
+  left: 5.41rem;
+  top: 15.06rem;
+  width: 1.48rem;
+}
+
+.select_ok{
+  width: 2.56rem;
+  position: fixed;
+  bottom: 0.48rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.return{
+  width: 2.56rem;
+  position: fixed;
+  bottom: 0.48rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* 海报1 */
+
+
+/* 海报2 */
+.pageposter2,
+.pageposter3 {
+  position: absolute;
+  margin: auto;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /* z-index: 0; */
+}
+
+.pageposter2 {
+  opacity: 0.01;
+}
+
+.pageposter3 {
+  pointer-events:none;/* 禁止长按图片保存 */
+}
+
+.bg.poster2,
+.bg.poster3 {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.poster2.yuebingdiv {
+  top: 5.58rem;
+  left: 3.47rem;
+}
+
+.yuebingdiv>img {
+  width: 1.3rem;
+}
+
+.yuebing1.poster2 {
+  top: 0rem;
+  left: 0rem;
+}
+
+.yuebing2.poster2 {
+  top: 0rem;
+  left: 1.6rem;
+}
+
+.yuebing3.poster2 {
+  top: 1.98rem;
+  left: 0rem;
+}
+
+.yuebing4.poster2 {
+  top: 1.98rem;
+  left: 1.6rem;
+}
+
+.poster2.headimg {
+  left: 0.59rem;
+  top: 11.87rem;
+  width: 1.2rem;
+}
+
+.poster2.nickname {
+  left: 1.68rem;
+  top: 12.28rem;
+  width: 1.6rem;
+  height: 0.32rem;
+  color: #c19a60;
+  size: 26;
+  font-family: '黑体';
+}
+
+.poster2.logo {
+  left: 5.41rem;
+  top: 14.11rem;
+  width: 1.48rem;
+}
+
+/* 海报2 */
+
+/* 信 */
+
+.btn {
+  display: none;
+  left: 0rem;
+  bottom: 0.2rem;
+  width: 4.19rem;
+  width: 7.07rem;
+  z-index: 999;
+  pointer-events:none;
+  position: absolute;
+}
+
+.pokingMe{
+  position: fixed;
+  left: 0;
+  bottom: 1.2rem;
+  width: 2.24rem;
+  z-index: 999;
+  display: none;
+}
+
+.xing {
+  display: none;
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  position: absolute;
+}
+
+.xing_title{
+  top: 5.504rem;
+  left: 0.38rem;
+  font-size: 0.352rem;
+  font-weight: 700;
+  color: #664635;
+  z-index: 1000;
+  transform: rotate(-5.85deg);
+  position: absolute;
+}
+
+.xing_return{
+  position: fixed !important;
+  top: 0.24rem;
+  left: 0.24rem;
+  z-index: 1000;
+  width: 1.6rem;
+  display: none;
+}
+
+.share {
+  width: 2.61rem;
+  position: fixed !important;
+  top: 1rem;
+  right:0.08rem;
+  animation: share 0.8s ease-in-out 0.2s alternate infinite;
+  z-index: 999;
+  display: none;
+}
+
+.poster1_text{
+  width: 3.75rem;
+  position: absolute;
+  top: 4.05rem;
+  left: 3.12rem;
+}
+
+.poster1_text_1 {
+  width: 3.75rem;
+  position: absolute;
+  top: 4.05rem;
+  left: 3.12rem;
+  animation: poster1_text 3s linear 0.5s infinite;
+}
+
+@keyframes poster1_text {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes share {
+  0%{
+    top: 0.08rem;
+  }
+
+  100% {
+    top: 0.24rem;
+  }
+}
+
+/* 信 */
